@@ -30,13 +30,9 @@ public class SampleBot extends TelegramLongPollingBot {
     private final CloseableHttpClient httpClient = HttpClients.createDefault();
     private final ObjectMapper mapper = new ObjectMapper();
 
-    public SampleBot(String token) {
-        final DefaultBotOptions options = new DefaultBotOptions();
-        options.setMaxThreads(200);
-        options.setRequestConfig(RequestConfig.custom()
-                .setContentCompressionEnabled(true)
-                .build());
 
+
+    public SampleBot(String token, DefaultBotOptions options) {
         super(options, token);
     }
 
