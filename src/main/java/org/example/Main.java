@@ -16,7 +16,9 @@ public class Main {
                 .setContentCompressionEnabled(true)
                 .build());
 
-        SampleBot bot = new SampleBot("7252935986:AAERy7gEAjEi_ifOhbQbFEFD9YOatjt42Fg", options);
+        String key = System.getenv("TELEGRAM_API_KEY");
+
+        SampleBot bot = new SampleBot(key, options);
         api.registerBot(bot);
     }
 }
